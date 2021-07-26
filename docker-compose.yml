@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+
+    moodle-ubuntu:
+        container_name: moodle-ubuntu
+        build: .
+        restart: unless-stopped
+        ports:
+          - 80:80
+        volumes:
+          - ./moodledata:/var/www/moodledata
